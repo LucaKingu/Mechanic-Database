@@ -10,9 +10,7 @@ CREATE TABLE customer
 	contactNumber VARCHAR(25) NOT NULL,
 	email NVARCHAR(40) NOT NULL,
 	address NVARCHAR(80) NOT NULL,
-	mechanicId INT NOT NULL CONSTRAINT cs_mId_fk REFERENCES mechanic(mechanicId)
 );
-
 
 CREATE TABLE mechanic
 (
@@ -21,9 +19,10 @@ CREATE TABLE mechanic
 	lastName NVARCHAR(25) NOT NULL,
 	salary SMALLMONEY NOT NULL,
 	contactNumber VARCHAR(25) NOT NULL, --Catering for international long numbers
-	email NVARCHAR(40) NOT NULL
+	email NVARCHAR(40) NOT NULL,
+	customerId INT NOT NULL CONSTRAINT mc_cId_fk REFERENCES customer(customerId)
 );
---One customer can have one mechanic
+--One customer can have many mechanics
 
 CREATE TABLE [service]
 (
@@ -33,9 +32,9 @@ CREATE TABLE [service]
 	[status] BIT NOT NULL,	--Takes 1 if the car is serviced and requires no further intervention, takes -1 if car is required/expected to come back to be serviced.
 	mechanicId INT NOT NULL CONSTRAINT se_mId_fk REFERENCES mechanic(mechanicId)
 );
---One mechanic can perform one service
+--One mechanic can perform many services
 
 
 
-
+select * from mechanic
 
