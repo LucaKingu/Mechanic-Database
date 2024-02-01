@@ -3,5 +3,5 @@
 
 create table test
 (
-	
+	testId int primary key
 );
