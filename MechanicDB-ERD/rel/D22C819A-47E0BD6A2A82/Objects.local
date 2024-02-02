@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.relational.RelationalDesign>
-   <object objectType="Table" objectID="07F591C3-928B-6354-A60A-CC48737781A7" name="customer" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="D22C819A-D1BD-4759-AF48-47E0BD6A2A82" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Table" objectID="E659F4D0-81C9-D6AA-9BC6-4E183ACD2D85" name="mechanic" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="D22C819A-D1BD-4759-AF48-47E0BD6A2A82" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Table" objectID="2E259EFD-9E11-A5DD-E977-77050D414C67" name="service" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="D22C819A-D1BD-4759-AF48-47E0BD6A2A82" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Table" objectID="CBBB51A1-F7DD-3C9D-36E7-FAE560FC05AF" name="serviceRecord" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="D22C819A-D1BD-4759-AF48-47E0BD6A2A82" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Table" objectID="65C95487-EFC4-315C-D622-968272F2BB94" name="vehicle" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="D22C819A-D1BD-4759-AF48-47E0BD6A2A82" propertySourceId="" propertyTargetId=""/>
-</oracle.dbtools.crest.model.design.relational.RelationalDesign>
