@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65C95487-EFC4-315C-D622-968272F2BB94" name="vehicle">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:30:35 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="vehicleId" id="BBEB8248-F640-9E05-02E6-FF5CCDDC009C">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:30:53 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="brand" id="7BC48CEA-0684-D680-7595-B7898D9910DA">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:30:53 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="model" id="4C48CA8D-0EAD-F1B8-1F3C-F13AD0D5F4C5">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:31:55 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="year" id="47137135-E3BF-8BC8-EE0D-DA72E60BBC22">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:31:55 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plate" id="BF13E0E2-49D4-9F7C-E5B2-2259AE5F49A5">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:31:55 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6BF7CEDD-A05C-B897-A4A1-56708B1105F6" name="vehicle_PK">
+<createdBy>alfin</createdBy>
+<createdTime>2024-02-02 12:30:53 UTC</createdTime>
+<ownerDesignName>MechanicDB-ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBEB8248-F640-9E05-02E6-FF5CCDDC009C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

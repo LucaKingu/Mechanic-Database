@@ -1,4 +1,5 @@
 --Since I created DB manually, uncomment below line to create DB via script
+
 --CREATE DATABASE MechanicDB
 
 
