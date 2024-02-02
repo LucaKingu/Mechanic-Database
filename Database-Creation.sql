@@ -6,7 +6,7 @@
 CREATE TABLE [service]
 (
 	serviceId INT PRIMARY KEY IDENTITY(1,1),
-	serviceDescription NVARCHAR(300) NOT NULL,
+	serviceName NVARCHAR(300) NOT NULL,
 );
 
 CREATE TABLE mechanic
@@ -61,13 +61,18 @@ CREATE TABLE serviceRecord
 --One mechanic could contain many service records
 
 
+--EXEC sp_rename 'service.serviceDescription' , 'serviceName' , 'COLUMN';
+--Needed to alter column name in table service during construction of DB
 
-select * from vehicle
 
-select * from service
 
-select * from serviceRecord
 
-select * from customer
+--INSERTS For testing the database connection and values to backend
+INSERT INTO [service] (serviceName) VALUES ('Routine Maintenance') , ('Diagnostic Services'),
+										   ('Engine Repairs') , ('Transmission Services'),
+										   ('Electrical System Repairs') , ('Tire Services'),
+										   ('Exhaust System Repairs') , ('Routine Maintenance'); 
 
-select * from mechanic
+SELECT * FROM [service];
+
+
