@@ -94,3 +94,17 @@ INSERT INTO [service] (serviceName , mechanicId) VALUES ('Engine Repairs' , 3),
 
 
 SELECT * FROM [service];
+
+INSERT INTO customer (firstName , lastName , contactNumber , email , [address]) VALUES ('Laura' , 'Brincat' , '+356 79210567' , 'LB@gmail.com' , 'Zebbug, Triq il-Mithna, Ta filep');
+
+INSERT INTO customer (firstName , lastName , contactNumber , email , [address]) VALUES ('Jeffrey' , 'Vella' , '+356 79002785' , 'VellaJeffrey@gmail.com' , 'Qormi, Side Street, SweetCorn'),
+																					   ('Brian' , 'Montebello' , '+356 99827466' , 'MontebelloB@hotMail.com' , 'Mosta, Triq Dun Karm, Wallflower flat 3'),
+																					   ('Adrian' , 'Attard' , '+356 79026758' , 'AttardADrian@gmail.com' , 'Zebbug , Triq ta taht, Pupil 5'),
+																					   ('Enya' , 'Mali' , '+977 18958270' , 'EnyaMali@gmail.com' , 'Sliema , Honda Street , L-Ahrax flat 12'),
+																					   ('Mathias' , 'Abela' , '+356 79028512' , 'AbelaMathis@gmail.com' , 'Qormi , Triq De Rohan , Nahal 6'),
+																					   ('Neil' , 'Azzoppardi' , '+356 99894672' , 'AzzoppardiNeil@gmail.com' , 'Mellieha, End Street , Melh 2');
+
+
+
+
+SELECT * FROM customer;
