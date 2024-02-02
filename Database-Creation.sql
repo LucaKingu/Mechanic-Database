@@ -51,7 +51,7 @@ CREATE TABLE serviceRecord
 	recordId INT PRIMARY KEY IDENTITY(1,1),
 	serviceDate DATE NOT NULL,
 	[description] NVARCHAR(300),	--Descriptions are not always needed
-	[status] BIT NOT NULL,	--Takes 1 if the car is serviced and requires no further intervention, takes -1 if car is required/expected to come back to be serviced.
+	[status] BIT NOT NULL,	--Takes 1 if the car is serviced and requires no further intervention, takes 0 if car is required/expected to come back to be serviced.
 	laborHours SMALLINT NOT NULL,
 	partsUsed NVARCHAR(300) NOT NULL,
 	totalCost SMALLMONEY NOT NULL,
@@ -122,3 +122,30 @@ INSERT INTO vehicle (brand , model , [year] , plate , customerId) VALUES ('Toyot
 
 
 SELECT * FROM vehicle;
+
+
+select * from service;
+select * from customer;
+
+INSERT INTO serviceRecord (serviceDate , [description] , [status] , laborHours , partsUsed , totalCost , serviceId , customerId , mechanicId) VALUES
+						  ('2023-09-12' , '' , 1 , 3 , 'No parts used' , 70 , 1 , 1 , 4);
+
+INSERT INTO serviceRecord (serviceDate , [description] , [status] , laborHours , partsUsed , totalCost , serviceId , customerId , mechanicId) VALUES
+						  ('2023-09-15', '', 1 , 3 , 'Clutches and breaks' , 210 , 3 , 2 , 2),
+						  ('2023-08-11' , '' , 0 , 5 , 'No parts used' , 190 , 6 , 3 , 1),
+						  ('2023-09-02' , 'Handed parts to customer was asked' , 1 , 7 , 'Manifold and Oxygen sensors' , 350 , 7 , 4 , 2),
+						  ('2024-01-16' , '' , 1 , 2 , 'No parts used' , 60 , 8 , 5 , 3),
+						  ('2023-11-05' , '' , 1 , 1 , 'Tires' , 75 , 4 , 6 , 4),
+						  ('2023-10-18' , 'Customer must return with vehicle as engine is prone to coolant leaks' , 0 , 12 , 'Water pump,Rubber Grommets,Main seal, Oil pump and Head Gasket' , 1120 , 2 , 7 ,3);
+
+						  
+
+SELECT * FROM serviceRecord; 
+
+UPDATE serviceRecord
+SET [status] = 0
+WHERE recordId = 3
+
+UPDATE serviceRecord
+SET [status] = 0
+WHERE recordId = 7
