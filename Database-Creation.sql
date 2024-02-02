@@ -65,7 +65,7 @@ CREATE TABLE serviceRecord
 
 
 --EXEC sp_rename 'service.serviceDescription' , 'serviceName' , 'COLUMN';
---Needed to alter column name in table service during construction of DB
+--Needed to alter column name in table service during construction of tables
 
 
 
@@ -142,10 +142,45 @@ INSERT INTO serviceRecord (serviceDate , [description] , [status] , laborHours ,
 
 SELECT * FROM serviceRecord; 
 
-UPDATE serviceRecord
-SET [status] = 0
-WHERE recordId = 3
+--Needed to update status bit data type to 0 instead of -1
+--UPDATE serviceRecord
+--SET [status] = 0
+--WHERE recordId = 3
 
-UPDATE serviceRecord
-SET [status] = 0
-WHERE recordId = 7
+--UPDATE serviceRecord
+--SET [status] = 0
+--WHERE recordId = 7
+
+
+
+
+--The below are views which will be implemented in database,and use them in backend.
+--This is due to that fact that I think a mechanic would find these queries helpful
+
+--Show all Customers with their respective important vehicle information
+CREATE VIEW customerVehicleInfo AS
+select CONCAT(firstName , ' ' , lastName) AS 'Name' , c.contactNumber ,
+	   v.brand , v.model , v.[year], v.plate 
+FROM customer c
+JOIN vehicle v 
+ON v.customerId = c.customerId
+
+SELECT * FROM customerVehicleInfo;
+
+
+--Show all customers that need to return to garage
+SELECT 
+
+
+--show all mechanics and their services
+
+
+select * from service
+select * from mechanic;
+
+select  s.serviceName , CONCAT(firstName ,' ', lastName) AS 'Name' 
+from mechanic m
+right join [service] s
+on m.mechanicId = s.serviceId
+GROUP BY serviceName,firstName,lastName
+
