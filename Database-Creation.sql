@@ -3,11 +3,6 @@
 --CREATE DATABASE MechanicDB
 
 
-CREATE TABLE [service]
-(
-	serviceId INT PRIMARY KEY IDENTITY(1,1),
-	serviceName NVARCHAR(300) NOT NULL,
-);
 
 CREATE TABLE mechanic
 (
@@ -17,9 +12,17 @@ CREATE TABLE mechanic
 	salary SMALLMONEY NOT NULL,
 	contactNumber VARCHAR(25) NOT NULL, --Catering for international long numbers
 	email NVARCHAR(40) NOT NULL,
-	serviceId INT NOT NULL CONSTRAINT mh_sId_fk FOREIGN KEY(serviceId) REFERENCES [service](serviceId),
 );
---One service could contain many mechanics
+
+
+CREATE TABLE [service]
+(
+	serviceId INT PRIMARY KEY IDENTITY(1,1),
+	serviceName NVARCHAR(300) NOT NULL,
+	mechanicId INT NOT NULL CONSTRAINT sr_mcId_fk FOREIGN KEY(mechanicId) REFERENCES mechanic(mechanicId)
+);
+--One mechanic could contain many services
+
 
 CREATE TABLE customer
 (
@@ -74,5 +77,8 @@ INSERT INTO [service] (serviceName) VALUES ('Routine Maintenance') , ('Diagnosti
 										   ('Exhaust System Repairs') , ('Routine Maintenance'); 
 
 SELECT * FROM [service];
+
+
+INSERT INTO mechanic (firstName , lastName , salary , contactNumber , email , serviceId	) VALUES ('John' , 'Stone' , '32000' , '+356 79340519' , 'johnStone@gmail.com' , 1)
 
 
