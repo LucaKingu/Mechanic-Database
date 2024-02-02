@@ -155,11 +155,11 @@ SELECT * FROM serviceRecord;
 
 
 --The below are views which will be implemented in database,and use them in backend.
---This is due to that fact that I think a mechanic would find these queries helpful
+--This is due to that fact that I think a real-life mechanic would find these queries helpful
 
 --Show all Customers with their respective important vehicle information
 CREATE VIEW customerVehicleInfo AS
-select CONCAT(firstName , ' ' , lastName) AS 'Name' , c.contactNumber ,
+SELECT CONCAT(firstName , ' ' , lastName) AS 'Name' , c.contactNumber ,
 	   v.brand , v.model , v.[year], v.plate 
 FROM customer c
 JOIN vehicle v 
@@ -170,13 +170,14 @@ SELECT * FROM customerVehicleInfo;
 
 --Show all customers that need to return to garage
 CREATE VIEW customerReturns AS
-SELECT c.firstName , c.lastName , c.contactNumber ,sr.[status] , sr.[description] 
+SELECT CONCAT(c.firstName ,' ', c.lastName) AS 'Name' , c.contactNumber ,sr.[status] , sr.[description] 
 FROM customer c
 JOIN serviceRecord sr
 ON sr.customerId = c.customerId
 WHERE sr.[status] = 0
 
 SELECT * FROM customerReturns;
+
 
 --show all mechanics and their services
 CREATE VIEW mechanicService AS
@@ -186,7 +187,7 @@ JOIN [service] s
 ON m.mechanicId = s.mechanicId
 GROUP BY m.firstName , m.lastName, s.serviceName
 
-
+SELECT * FROM mechanicService;
 
 --I had the thought of stored procedures, although they are more encapsulating and centralized.
 --My research on how to implement procedures into the backend show that it takes much more code
