@@ -179,19 +179,16 @@ WHERE sr.[status] = 0
 SELECT * FROM customerReturns;
 
 --show all mechanics and their services
+CREATE VIEW mechanicService AS
+SELECT CONCAT(firstName ,' ', lastName) AS 'Name', s.serviceName 
+FROM mechanic m
+JOIN [service] s
+ON m.mechanicId = s.mechanicId
+GROUP BY m.firstName , m.lastName, s.serviceName
 
-
-select * from [service]
-select * from mechanic;
-
-select  s.serviceName , CONCAT(firstName ,' ', lastName) AS 'Name' 
-from mechanic m
-right join [service] s
-on m.mechanicId = s.serviceId
-GROUP BY serviceName,firstName,lastName
 
 
 --I had the thought of stored procedures, although they are more encapsulating and centralized.
---My research on how to implement procedures into the backend takes much more code to execute anyway.
---Thus I will stick with simple inserts.
+--My research on how to implement procedures into the backend show that it takes much more code
+--to execute anyway.Thus I will stick with simple inserts,which are more readable.
 
