@@ -140,7 +140,7 @@ INSERT INTO serviceRecord (serviceDate , [description] , [status] , laborHours ,
 
 						  
 
-SELECT * FROM serviceRecord; 
+SELECT * FROM serviceRecord;
 
 --Needed to update status bit data type to 0 instead of -1
 --UPDATE serviceRecord
@@ -169,13 +169,19 @@ SELECT * FROM customerVehicleInfo;
 
 
 --Show all customers that need to return to garage
-SELECT 
+CREATE VIEW customerReturns AS
+SELECT c.firstName , c.lastName , c.contactNumber ,sr.[status] , sr.[description] 
+FROM customer c
+JOIN serviceRecord sr
+ON sr.customerId = c.customerId
+WHERE sr.[status] = 0
 
+SELECT * FROM customerReturns;
 
 --show all mechanics and their services
 
 
-select * from service
+select * from [service]
 select * from mechanic;
 
 select  s.serviceName , CONCAT(firstName ,' ', lastName) AS 'Name' 
@@ -183,4 +189,9 @@ from mechanic m
 right join [service] s
 on m.mechanicId = s.serviceId
 GROUP BY serviceName,firstName,lastName
+
+
+--I had the thought of stored procedures, although they are more encapsulating and centralized.
+--My research on how to implement procedures into the backend takes much more code to execute anyway.
+--Thus I will stick with simple inserts.
 
