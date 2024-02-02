@@ -57,7 +57,7 @@ CREATE TABLE serviceRecord
 	totalCost SMALLMONEY NOT NULL,
 	serviceId INT NOT NULL CONSTRAINT sr_sId_fk FOREIGN KEY(serviceId) REFERENCES [service](serviceId),
 	customerId INT NOT NULL CONSTRAINT sr_csId_fk FOREIGN KEY(customerId) REFERENCES customer(customerId),
-	mechanicId INT NOT NULL CONSTRAINT sr_mcId_fk FOREIGN KEY(mechanicId) REFERENCES mechanic(mechanicId)
+	mechanicId INT NOT NULL CONSTRAINT sr_mchId_fk FOREIGN KEY(mechanicId) REFERENCES mechanic(mechanicId)
 );
 --One service could contain many service records
 --One customer could contain many service records
@@ -71,14 +71,26 @@ CREATE TABLE serviceRecord
 
 
 --INSERTS For testing the database connection and values to backend
-INSERT INTO [service] (serviceName) VALUES ('Routine Maintenance') , ('Diagnostic Services'),
-										   ('Engine Repairs') , ('Transmission Services'),
-										   ('Electrical System Repairs') , ('Tire Services'),
-										   ('Exhaust System Repairs') , ('Routine Maintenance'); 
+INSERT INTO mechanic (firstName , lastName , salary , contactNumber , email) VALUES ('John' , 'Stone' , '32000' , '+356 79340519' , 'johnStone@gmail.com'); --Always test Insert first
+
+INSERT INTO mechanic (firstName , lastName , salary , contactNumber , email) VALUES ('Isaac' , 'Micallef' , '27000' , '+356 99019267' , 'MicallefI21@gmail.com'),
+																					('Mark' , 'Farrugia' , '46000' , '+356 79129943' , 'FarrugiaMark@gmail.com'),
+																					('Matthew' , 'Attard' , '21000' , '+356 79008246' , 'MatthewAttard@gmail.com');
+
+
+SELECT * FROM mechanic;
+
+
+
+INSERT INTO [service] (serviceName , mechanicId) VALUES ('Routine Maintenance' , 4);
+
+INSERT INTO [service] (serviceName , mechanicId) VALUES ('Engine Repairs' , 3),
+														('Transmission Services' , 2),
+														('Tire Services' , 4),
+														('Diagnostic Services' , 1),
+														('Electrical System Reparis' , 1),
+														('Exhaust System Repairs' , 2),
+														('Diagnostic Services' , 3);
+
 
 SELECT * FROM [service];
-
-
-INSERT INTO mechanic (firstName , lastName , salary , contactNumber , email , serviceId	) VALUES ('John' , 'Stone' , '32000' , '+356 79340519' , 'johnStone@gmail.com' , 1)
-
-
