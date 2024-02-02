@@ -108,3 +108,17 @@ INSERT INTO customer (firstName , lastName , contactNumber , email , [address]) 
 
 
 SELECT * FROM customer;
+
+
+INSERT INTO vehicle (brand , model , [year] , plate , customerId) VALUES ('Toyota' , 'camry' , '2024' , 'ALK 938' , 1);
+
+INSERT INTO vehicle (brand , model , [year] , plate , customerId) VALUES ('Toyota' , 'corolla' , '2011' , 'JDI 839' , 2),
+																		 ('Hyundai' , 'Getz' , '2008' , 'LCN 698' , 3),
+																		 ('Nissan' , 'March' , '2014' , 'HAJ 152' , 4),
+																		 ('Volvo' , 'V90 cross country' , '2019' , 'Greedy' , 5),
+																		 ('Citroen' , 'Berlingo' , '2014' , 'AHN 291' , 5),
+																		 ('Hyundai' , 'Getz' , '2011' , 'HNV 920' , 6),
+																		 ('Mazda' , 'Demio' , '2022' , 'DA 466RO' , 7);
+
+
+SELECT * FROM vehicle;
