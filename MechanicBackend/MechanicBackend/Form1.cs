@@ -1,3 +1,15 @@
+using System.Linq;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 namespace MechanicBackend
 {
     public partial class Form1 : Form
@@ -14,7 +26,16 @@ namespace MechanicBackend
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString;
+            SqlConnection conn;
 
+            connectionString = @"Data Source=DESKTOP-I830V2D; Initial Catalog=MechanicDB;Integrated Security=True;";
+            conn = new SqlConnection(connectionString);
+
+            conn.Open();
+            MessageBox.Show("Connection Succesfully open!");
+
+            conn.Close();
         }
     }
 }
