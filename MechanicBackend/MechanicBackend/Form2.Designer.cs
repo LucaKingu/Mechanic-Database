@@ -34,6 +34,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(69, 37);
             dataGridView1.Name = "dataGridView1";
@@ -47,7 +48,7 @@
             ClientSize = new Size(872, 478);
             Controls.Add(dataGridView1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "DATA";
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

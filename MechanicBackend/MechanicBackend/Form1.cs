@@ -99,5 +99,17 @@ namespace MechanicBackend
             Form2 form2 = new Form2(conn, "SELECT * FROM dbo.customerVehicleInfo");
             form2.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
+
+            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.mechanicService");
+            form2.Show();
+        }
     }
 }
