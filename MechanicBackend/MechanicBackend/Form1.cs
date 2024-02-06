@@ -63,7 +63,7 @@ namespace MechanicBackend
             if (conn != null && this.conn.State == ConnectionState.Open)
             {
                 this.conn.Close();
-                MessageBox.Show("Connection Closed");
+                MessageBox.Show("Connection Closed", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -78,7 +78,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -91,7 +91,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -104,7 +104,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -129,7 +129,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -153,7 +153,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -178,7 +178,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -203,7 +203,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -228,7 +228,7 @@ namespace MechanicBackend
         {
             if (conn == null || conn.State != ConnectionState.Open)
             {
-                MessageBox.Show("Connection is not open!");
+                MessageBox.Show("Connection is not open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
