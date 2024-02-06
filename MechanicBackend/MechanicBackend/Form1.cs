@@ -82,7 +82,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.customerReturns");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.customerReturns");
             form2.Show();
         }
 
@@ -95,7 +95,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.customerVehicleInfo");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.customerVehicleInfo");
             form2.Show();
         }
 
@@ -108,7 +108,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.mechanicService");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.mechanicService");
             form2.Show();
         }
 
@@ -133,7 +133,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.mechanic");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.mechanic");
             form2.Show();
         }
 
@@ -157,7 +157,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.service");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.service");
             form2.Show();
         }
 
@@ -182,7 +182,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.customer");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.customer");
             form2.Show();
         }
 
@@ -207,7 +207,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.vehicle");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.vehicle");
             form2.Show();
         }
 
@@ -232,7 +232,7 @@ namespace MechanicBackend
                 return;
             }
 
-            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.serviceRecord");
+            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.serviceRecord");
             form2.Show();
         }
     }
