@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace MechanicBackend
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -82,8 +82,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.customerReturns");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.customerReturns");
+            information.Show();
         }
 
         //View to check all the customer vehicles information
@@ -95,8 +95,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.customerVehicleInfo");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.customerVehicleInfo");
+            information.Show();
         }
 
         //View to check all the services that each mechanic can perform
@@ -108,8 +108,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.mechanicService");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.mechanicService");
+            information.Show();
         }
 
 
@@ -133,8 +133,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.mechanic");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.mechanic");
+            information.Show();
         }
 
 
@@ -157,8 +157,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.service");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.service");
+            information.Show();
         }
 
 
@@ -182,8 +182,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.customer");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.customer");
+            information.Show();
         }
 
 
@@ -207,8 +207,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.vehicle");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.vehicle");
+            information.Show();
         }
 
 
@@ -232,8 +232,8 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation form2 = new showInformation(conn, "SELECT * FROM dbo.serviceRecord");
-            form2.Show();
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.serviceRecord");
+            information.Show();
         }
     }
 }
