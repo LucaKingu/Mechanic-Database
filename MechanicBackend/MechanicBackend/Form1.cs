@@ -20,7 +20,7 @@ namespace MechanicBackend
         }
 
         string connectionString;
-        SqlConnection conn;
+        SqlConnection conn;    
 
         SqlCommand command;
         SqlDataReader reader;
@@ -49,31 +49,6 @@ namespace MechanicBackend
                 this.conn.Close();
                 MessageBox.Show("Connection Closed");
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            query = "SELECT * FROM dbo.customer";
-
-            command = new SqlCommand(query, conn);
-
-            reader = command.ExecuteReader();
-
-            //Access each row one by one
-            while (reader.Read())
-            {
-                output = output + reader.GetValue(0) + " - " + reader.GetValue(1) + " - "
-                                + reader.GetValue(2) + " - " + reader.GetValue(3) + " - "
-                                + reader.GetValue(4) + " - " + reader.GetValue(5) + " - ";
-            }
-
-            MessageBox.Show(output);
-
-            //Clear the output so that it wont repeat
-            output = string.Empty;
-
-            reader.Close();
-            command.Dispose();
         }
 
         private void button3_Click_1(object sender, EventArgs e)

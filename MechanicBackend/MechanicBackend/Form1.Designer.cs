@@ -38,7 +38,9 @@
             // button1
             // 
             button1.BackColor = SystemColors.HotTrack;
+            button1.BackgroundImageLayout = ImageLayout.None;
             button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 30F);
             button1.ForeColor = Color.Black;
             button1.Location = new Point(12, 926);
@@ -53,6 +55,7 @@
             // 
             button2.BackColor = Color.IndianRed;
             button2.Cursor = Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 30F);
             button2.ForeColor = Color.Black;
             button2.Location = new Point(12, 1022);
@@ -66,6 +69,8 @@
             // button3
             // 
             button3.BackColor = Color.DarkOrange;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Segoe UI", 20F);
             button3.Location = new Point(657, 967);
             button3.Name = "button3";
@@ -78,6 +83,8 @@
             // button4
             // 
             button4.BackColor = Color.DarkOrange;
+            button4.Cursor = Cursors.Hand;
+            button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Segoe UI", 20F);
             button4.Location = new Point(1214, 967);
             button4.Name = "button4";
@@ -90,6 +97,8 @@
             // button5
             // 
             button5.BackColor = Color.DarkOrange;
+            button5.Cursor = Cursors.Hand;
+            button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Segoe UI", 20F);
             button5.Location = new Point(1762, 967);
             button5.Name = "button5";
