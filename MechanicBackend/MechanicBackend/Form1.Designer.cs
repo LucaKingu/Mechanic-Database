@@ -38,7 +38,7 @@
             button1.BackColor = SystemColors.HotTrack;
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 30F);
-            button1.ForeColor = Color.IndianRed;
+            button1.ForeColor = Color.Black;
             button1.Location = new Point(12, 926);
             button1.Name = "button1";
             button1.Size = new Size(466, 90);
@@ -49,15 +49,15 @@
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.HotTrack;
+            button2.BackColor = Color.IndianRed;
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI", 30F);
-            button2.ForeColor = Color.IndianRed;
+            button2.ForeColor = Color.Black;
             button2.Location = new Point(12, 1022);
             button2.Name = "button2";
             button2.Size = new Size(466, 90);
             button2.TabIndex = 1;
-            button2.Text = "CONNECT DATBASE";
+            button2.Text = "DISCONNECT DATBASE";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
