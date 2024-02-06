@@ -40,17 +40,34 @@ namespace MechanicBackend
             //Integrated security = True; So that you can easily connect to the database engine via windows authentication on your local machine
             conn = new SqlConnection(connectionString);
 
-            conn.Open();
-            MessageBox.Show("Connection Succesfully open!");
+            //try catch block to catch the connectionString being wrong
+            try
+            {
+                conn.Open();
+
+                if (conn != null && this.conn.State == ConnectionState.Open)
+                {
+                    MessageBox.Show("Connection is currently open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message + "\n\nPLESAE CHECK YOU HAVE THE CORRECT DATA SOURCE INPUTTED", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Added my own more user-friendly message under system exception so that the error can be better understood.
+            }
         }
 
         //Close connection
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (this.conn.State == System.Data.ConnectionState.Open)
+            if (conn != null && this.conn.State == ConnectionState.Open)
             {
                 this.conn.Close();
                 MessageBox.Show("Connection Closed");
+            }
+            else
+            {
+                MessageBox.Show("Connection is not open" , "Warning" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation);
             }
         }
 
