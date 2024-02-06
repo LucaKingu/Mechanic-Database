@@ -63,13 +63,15 @@
             // 
             // button3
             // 
-            button3.Location = new Point(745, 501);
+            button3.BackColor = Color.DarkOrange;
+            button3.Font = new Font("Segoe UI", 20F);
+            button3.Location = new Point(701, 967);
             button3.Name = "button3";
-            button3.Size = new Size(75, 23);
+            button3.Size = new Size(402, 82);
             button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Text = "Customer Returns";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // Form1
             // 

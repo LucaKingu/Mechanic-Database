@@ -53,14 +53,14 @@ namespace MechanicBackend
 
         private void button3_Click(object sender, EventArgs e)
         {
-             query = "SELECT * FROM dbo.customer";
+            query = "SELECT * FROM dbo.customer";
 
             command = new SqlCommand(query, conn);
 
             reader = command.ExecuteReader();
 
             //Access each row one by one
-            while(reader.Read())
+            while (reader.Read())
             {
                 output = output + reader.GetValue(0) + " - " + reader.GetValue(1) + " - "
                                 + reader.GetValue(2) + " - " + reader.GetValue(3) + " - "
@@ -73,7 +73,19 @@ namespace MechanicBackend
             output = string.Empty;
 
             reader.Close();
-            command.Dispose(); 
+            command.Dispose();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
+
+            Form2 form2 = new Form2(conn , "SELECT * FROM dbo.customerReturns");
+            form2.Show();
         }
     }
 }
