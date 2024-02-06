@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -37,7 +38,7 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 30F);
             button1.ForeColor = Color.IndianRed;
-            button1.Location = new Point(162, 171);
+            button1.Location = new Point(12, 926);
             button1.Name = "button1";
             button1.Size = new Size(466, 90);
             button1.TabIndex = 0;
@@ -45,11 +46,26 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.HotTrack;
+            button2.Cursor = Cursors.Hand;
+            button2.Font = new Font("Segoe UI", 30F);
+            button2.ForeColor = Color.IndianRed;
+            button2.Location = new Point(12, 1022);
+            button2.Name = "button2";
+            button2.Size = new Size(466, 90);
+            button2.TabIndex = 1;
+            button2.Text = "CONNECT DATBASE";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(2205, 1137);
+            Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Mechanic Database";
@@ -60,5 +76,6 @@
         #endregion
 
         private Button button1;
+        private Button button2;
     }
 }
