@@ -22,6 +22,11 @@ namespace MechanicBackend
         string connectionString;
         SqlConnection conn;
 
+        SqlCommand command;
+        SqlDataReader reader;
+        string query = "";
+        string output = "";
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -29,23 +34,26 @@ namespace MechanicBackend
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
             connectionString = @"Data Source=DESKTOP-I830V2D; Initial Catalog=MechanicDB;Integrated Security=True;";
             //Integrated security = True; So that you can easily connect to the database engine via windows authentication on your local machine
             conn = new SqlConnection(connectionString);
 
             conn.Open();
             MessageBox.Show("Connection Succesfully open!");
+        }
 
-            //The below is testing for queries to see the data is indeed being extracted
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (this.conn.State == System.Data.ConnectionState.Open)
+            {
+                this.conn.Close();
+                MessageBox.Show("Connection Closed");
+            }
+        }
 
-            /* SqlCommand command;
-            SqlDataReader reader;
-            string query = "";
-            string output = "";
-
-            query = "SELECT * FROM dbo.customer";
+        private void button3_Click(object sender, EventArgs e)
+        {
+             query = "SELECT * FROM dbo.customer";
 
             command = new SqlCommand(query, conn);
 
@@ -61,19 +69,11 @@ namespace MechanicBackend
 
             MessageBox.Show(output);
 
+            //Clear the output so that it wont repeat
+            output = string.Empty;
+
             reader.Close();
-            command.Dispose(); */
-
-            //conn.Close();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            if (this.conn.State == System.Data.ConnectionState.Open)
-            {
-                this.conn.Close();
-                MessageBox.Show("Connection Closed");
-            }
+            command.Dispose(); 
         }
     }
 }
