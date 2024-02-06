@@ -20,7 +20,7 @@ namespace MechanicBackend
         }
 
         string connectionString;
-        SqlConnection conn;    
+        SqlConnection conn;
 
         SqlCommand command;
         SqlDataReader reader;
@@ -32,6 +32,8 @@ namespace MechanicBackend
 
         }
 
+
+        //Open connection
         private void button1_Click(object sender, EventArgs e)
         {
             connectionString = @"Data Source=DESKTOP-I830V2D; Initial Catalog=MechanicDB;Integrated Security=True;";
@@ -42,6 +44,7 @@ namespace MechanicBackend
             MessageBox.Show("Connection Succesfully open!");
         }
 
+        //Close connection
         private void button2_Click_1(object sender, EventArgs e)
         {
             if (this.conn.State == System.Data.ConnectionState.Open)
@@ -51,6 +54,9 @@ namespace MechanicBackend
             }
         }
 
+
+        //Views are also explained in .sql file
+        //View to check all customers that need to come back get serviced.
         private void button3_Click_1(object sender, EventArgs e)
         {
             if (conn == null || conn.State != ConnectionState.Open)
@@ -63,6 +69,7 @@ namespace MechanicBackend
             form2.Show();
         }
 
+        //View to check all the customer vehicles information
         private void button4_Click(object sender, EventArgs e)
         {
             if (conn == null || conn.State != ConnectionState.Open)
@@ -75,6 +82,7 @@ namespace MechanicBackend
             form2.Show();
         }
 
+        //View to check all the services that each mechanic can perform
         private void button5_Click(object sender, EventArgs e)
         {
             if (conn == null || conn.State != ConnectionState.Open)
@@ -85,6 +93,85 @@ namespace MechanicBackend
 
             Form2 form2 = new Form2(conn, "SELECT * FROM dbo.mechanicService");
             form2.Show();
+        }
+
+
+        //They go 'Add' , 'Delete' , 'Show' for each table.
+        //Mechanic table Manipulation
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Service table Manipulation
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //Customer table Manipulation
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //Vehicle table Manipulation
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //Service Records table Manipulation
+        private void button18_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
