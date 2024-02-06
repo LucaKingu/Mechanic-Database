@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MechanicBackend
 {
-    public partial class Form2 : Form
+    public partial class showInformation : Form
     {
 
         private void Form2_Load(object sender, EventArgs e)
@@ -22,7 +22,7 @@ namespace MechanicBackend
         private SqlConnection connection;
         private string query;
 
-        public Form2(SqlConnection conn, string query)
+        public showInformation(SqlConnection conn, string query)
         {
             InitializeComponent();
             connection = conn;

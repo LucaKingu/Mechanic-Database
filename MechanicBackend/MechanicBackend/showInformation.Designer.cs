@@ -1,6 +1,6 @@
 ﻿namespace MechanicBackend
 {
-    partial class Form2
+    partial class showInformation
     {
         /// <summary>
         /// Required designer variable.

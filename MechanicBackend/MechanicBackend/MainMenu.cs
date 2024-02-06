@@ -117,7 +117,9 @@ namespace MechanicBackend
         //Mechanic table Manipulation
         private void button7_Click(object sender, EventArgs e)
         {
-
+            //No query is needed here
+            AddMechanic addMechanic = new AddMechanic(conn);
+            addMechanic.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
