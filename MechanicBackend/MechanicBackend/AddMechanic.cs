@@ -29,38 +29,38 @@ namespace MechanicBackend
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
-                //Retrieve values from textBoxes
-                string name = textBox1.Text;
-                string surname = textBox2.Text;
-                string salary = textBox3.Text;
-                string contactNumber = textBox4.Text;
-                string email = textBox5.Text;
+             {
+                    //Retrieve values from textBoxes
+                    string name = textBox1.Text;
+                    string surname = textBox2.Text;
+                    string salary = textBox3.Text;
+                    string contactNumber = textBox4.Text;
+                    string email = textBox5.Text;
 
-                //Get the INSERT Query
-                string insertQuery = "INSERT INTO dbo.mechanic(firstName , lastName , salary , contactNumber , email)" +
-                    "                 VALUES(@name , @surname , @salary , @contactNumber , @email)";
+                    //Get the INSERT Query
+                    string insertQuery = "INSERT INTO dbo.mechanic(firstName , lastName , salary , contactNumber , email)" +
+                        "                 VALUES(@name , @surname , @salary , @contactNumber , @email)";
 
-                //Add values with corresponding retrieved values
-                using (SqlCommand command = new SqlCommand(insertQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@name", name);
-                    command.Parameters.AddWithValue("@surname", surname);
-                    command.Parameters.AddWithValue("@salary", salary);
-                    command.Parameters.AddWithValue("@contactNumber", contactNumber);
-                    command.Parameters.AddWithValue("@email", email);
+                    //Add values with corresponding retrieved values
+                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@surname", surname);
+                        command.Parameters.AddWithValue("@salary", salary);
+                        command.Parameters.AddWithValue("@contactNumber", contactNumber);
+                        command.Parameters.AddWithValue("@email", email);
 
-                    command.ExecuteNonQuery();
-                }
+                        command.ExecuteNonQuery();
+                    }
 
-                MessageBox.Show("Mechanic added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mechanic added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured: " +ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
+             }
+             catch (Exception ex)
+             {
+                    MessageBox.Show("An error occured: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+             }
         }
+
+      }
     }
-}

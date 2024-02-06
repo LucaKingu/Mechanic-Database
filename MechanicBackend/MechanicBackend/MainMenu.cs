@@ -47,7 +47,7 @@ namespace MechanicBackend
 
                 if (conn != null && this.conn.State == ConnectionState.Open)
                 {
-                    MessageBox.Show("Connection is currently open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Connection is open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch(Exception ex)
