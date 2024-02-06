@@ -129,7 +129,7 @@
             button6.Cursor = Cursors.Hand;
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Segoe UI", 20F);
-            button6.Location = new Point(733, 141);
+            button6.Location = new Point(733, 76);
             button6.Name = "button6";
             button6.Size = new Size(394, 90);
             button6.TabIndex = 5;
@@ -143,7 +143,7 @@
             button7.Cursor = Cursors.Hand;
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Segoe UI", 20F);
-            button7.Location = new Point(122, 141);
+            button7.Location = new Point(122, 76);
             button7.Name = "button7";
             button7.Size = new Size(394, 90);
             button7.TabIndex = 6;
@@ -157,7 +157,7 @@
             button8.Cursor = Cursors.Hand;
             button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Segoe UI", 20F);
-            button8.Location = new Point(1345, 141);
+            button8.Location = new Point(1345, 76);
             button8.Name = "button8";
             button8.Size = new Size(394, 90);
             button8.TabIndex = 7;
@@ -171,7 +171,7 @@
             button9.Cursor = Cursors.Hand;
             button9.FlatStyle = FlatStyle.Popup;
             button9.Font = new Font("Segoe UI", 20F);
-            button9.Location = new Point(122, 300);
+            button9.Location = new Point(122, 254);
             button9.Name = "button9";
             button9.Size = new Size(394, 90);
             button9.TabIndex = 8;
@@ -185,7 +185,7 @@
             button10.Cursor = Cursors.Hand;
             button10.FlatStyle = FlatStyle.Popup;
             button10.Font = new Font("Segoe UI", 20F);
-            button10.Location = new Point(733, 300);
+            button10.Location = new Point(733, 254);
             button10.Name = "button10";
             button10.Size = new Size(394, 90);
             button10.TabIndex = 9;
@@ -199,7 +199,7 @@
             button11.Cursor = Cursors.Hand;
             button11.FlatStyle = FlatStyle.Popup;
             button11.Font = new Font("Segoe UI", 20F);
-            button11.Location = new Point(1345, 300);
+            button11.Location = new Point(1345, 254);
             button11.Name = "button11";
             button11.Size = new Size(394, 90);
             button11.TabIndex = 10;
@@ -213,7 +213,7 @@
             button12.Cursor = Cursors.Hand;
             button12.FlatStyle = FlatStyle.Popup;
             button12.Font = new Font("Segoe UI", 20F);
-            button12.Location = new Point(122, 473);
+            button12.Location = new Point(122, 431);
             button12.Name = "button12";
             button12.Size = new Size(394, 90);
             button12.TabIndex = 11;
@@ -227,7 +227,7 @@
             button13.Cursor = Cursors.Hand;
             button13.FlatStyle = FlatStyle.Popup;
             button13.Font = new Font("Segoe UI", 20F);
-            button13.Location = new Point(733, 473);
+            button13.Location = new Point(733, 431);
             button13.Name = "button13";
             button13.Size = new Size(394, 90);
             button13.TabIndex = 12;
@@ -241,7 +241,7 @@
             button14.Cursor = Cursors.Hand;
             button14.FlatStyle = FlatStyle.Popup;
             button14.Font = new Font("Segoe UI", 20F);
-            button14.Location = new Point(1345, 473);
+            button14.Location = new Point(1345, 431);
             button14.Name = "button14";
             button14.Size = new Size(394, 90);
             button14.TabIndex = 13;
@@ -255,11 +255,11 @@
             button15.Cursor = Cursors.Hand;
             button15.FlatStyle = FlatStyle.Popup;
             button15.Font = new Font("Segoe UI", 20F);
-            button15.Location = new Point(122, 634);
+            button15.Location = new Point(122, 606);
             button15.Name = "button15";
             button15.Size = new Size(394, 90);
             button15.TabIndex = 14;
-            button15.Text = "Add Customer";
+            button15.Text = "Add Vehicle";
             button15.UseVisualStyleBackColor = false;
             button15.Click += button15_Click;
             // 
@@ -269,11 +269,11 @@
             button16.Cursor = Cursors.Hand;
             button16.FlatStyle = FlatStyle.Popup;
             button16.Font = new Font("Segoe UI", 20F);
-            button16.Location = new Point(733, 634);
+            button16.Location = new Point(733, 606);
             button16.Name = "button16";
             button16.Size = new Size(394, 90);
             button16.TabIndex = 15;
-            button16.Text = "Add Customer";
+            button16.Text = "Delete Vehicle";
             button16.UseVisualStyleBackColor = false;
             button16.Click += button16_Click;
             // 
@@ -283,11 +283,11 @@
             button17.Cursor = Cursors.Hand;
             button17.FlatStyle = FlatStyle.Popup;
             button17.Font = new Font("Segoe UI", 20F);
-            button17.Location = new Point(1345, 634);
+            button17.Location = new Point(1345, 606);
             button17.Name = "button17";
             button17.Size = new Size(394, 90);
             button17.TabIndex = 16;
-            button17.Text = "Add Customer";
+            button17.Text = "Show All Vehicles";
             button17.UseVisualStyleBackColor = false;
             button17.Click += button17_Click;
             // 
@@ -297,11 +297,11 @@
             button18.Cursor = Cursors.Hand;
             button18.FlatStyle = FlatStyle.Popup;
             button18.Font = new Font("Segoe UI", 20F);
-            button18.Location = new Point(122, 787);
+            button18.Location = new Point(122, 772);
             button18.Name = "button18";
             button18.Size = new Size(394, 90);
             button18.TabIndex = 17;
-            button18.Text = "Add Customer";
+            button18.Text = "Add Service Record";
             button18.UseVisualStyleBackColor = false;
             button18.Click += button18_Click;
             // 
@@ -311,12 +311,13 @@
             button19.Cursor = Cursors.Hand;
             button19.FlatStyle = FlatStyle.Popup;
             button19.Font = new Font("Segoe UI", 20F);
-            button19.Location = new Point(733, 787);
+            button19.Location = new Point(733, 772);
             button19.Name = "button19";
             button19.Size = new Size(394, 90);
             button19.TabIndex = 18;
-            button19.Text = "Add Customer";
+            button19.Text = "Delete Service Record";
             button19.UseVisualStyleBackColor = false;
+            button19.Click += button19_Click;
             // 
             // button20
             // 
@@ -324,12 +325,13 @@
             button20.Cursor = Cursors.Hand;
             button20.FlatStyle = FlatStyle.Popup;
             button20.Font = new Font("Segoe UI", 20F);
-            button20.Location = new Point(1345, 787);
+            button20.Location = new Point(1345, 772);
             button20.Name = "button20";
             button20.Size = new Size(394, 90);
             button20.TabIndex = 19;
-            button20.Text = "Add Customer";
+            button20.Text = "Show All Service Records";
             button20.UseVisualStyleBackColor = false;
+            button20.Click += button20_Click;
             // 
             // Form1
             // 

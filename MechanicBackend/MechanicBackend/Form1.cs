@@ -55,7 +55,7 @@ namespace MechanicBackend
         }
 
 
-        //Views are also explained in .sql file
+        //Views are also explained in .sql file, they are the orange buttons in the main program
         //View to check all customers that need to come back get serviced.
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -110,7 +110,14 @@ namespace MechanicBackend
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
 
+            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.mechanic");
+            form2.Show();
         }
 
 
@@ -127,7 +134,14 @@ namespace MechanicBackend
 
         private void button11_Click(object sender, EventArgs e)
         {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
 
+            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.service");
+            form2.Show();
         }
 
 
@@ -145,7 +159,14 @@ namespace MechanicBackend
 
         private void button14_Click(object sender, EventArgs e)
         {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
 
+            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.customer");
+            form2.Show();
         }
 
 
@@ -163,7 +184,14 @@ namespace MechanicBackend
 
         private void button17_Click(object sender, EventArgs e)
         {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
 
+            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.vehicle");
+            form2.Show();
         }
 
 
@@ -172,6 +200,23 @@ namespace MechanicBackend
         private void button18_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (conn == null || conn.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection is not open!");
+                return;
+            }
+
+            Form2 form2 = new Form2(conn, "SELECT * FROM dbo.serviceRecord");
+            form2.Show();
         }
     }
 }
