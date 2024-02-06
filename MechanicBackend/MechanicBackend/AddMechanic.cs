@@ -37,8 +37,15 @@ namespace MechanicBackend
                     string contactNumber = textBox4.Text;
                     string email = textBox5.Text;
 
-                    //Get the INSERT Query
-                    string insertQuery = "INSERT INTO dbo.mechanic(firstName , lastName , salary , contactNumber , email)" +
+                // Check if name or surname is empty or null
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(contactNumber) || string.IsNullOrWhiteSpace(salary) || string.IsNullOrWhiteSpace(email))
+                {
+                    MessageBox.Show("None of the fields can be Empty", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Exit the method without executing the INSERT statement
+                }
+
+                //Get the INSERT Query
+                string insertQuery = "INSERT INTO dbo.mechanic(firstName , lastName , salary , contactNumber , email)" +
                         "                 VALUES(@name , @surname , @salary , @contactNumber , @email)";
 
                     //Add values with corresponding retrieved values
