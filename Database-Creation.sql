@@ -191,6 +191,8 @@ SELECT * FROM mechanicService;
 
 
 --Show all service Records.since I have 3 foreign keys, it makes sense to show the actual names via sub-queries
+--This will not be an "extra feature" like the other views,but rather instead of showing the original service
+--record table,I will show this views table.
 CREATE VIEW serviceRecords AS
 SELECT sr.serviceDate , sr.[description] , sr.[status] , sr.laborHours , sr.partsUsed , sr.totalCost ,
 	   (SELECT serviceName FROM service WHERE serviceId = sr.serviceId) AS 'Service',

@@ -234,7 +234,7 @@ namespace MechanicBackend
                 return;
             }
 
-            showInformation information = new showInformation(conn, "SELECT * FROM dbo.serviceRecord");
+            showInformation information = new showInformation(conn, "SELECT * FROM dbo.serviceRecords");
             information.Show();
         }
     }
