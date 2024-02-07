@@ -189,6 +189,17 @@ GROUP BY m.firstName , m.lastName, s.serviceName
 
 SELECT * FROM mechanicService;
 
+
+--Show all service Records.since I have 3 foreign keys, it makes sense to show the actual names via sub-queries
+CREATE VIEW serviceRecords AS
+SELECT sr.serviceDate , sr.[description] , sr.[status] , sr.laborHours , sr.partsUsed , sr.totalCost ,
+	   (SELECT serviceName FROM service WHERE serviceId = sr.serviceId) AS 'Service',
+	   (SELECT firstName FROM customer WHERE customerId = sr.customerId) AS 'Customer',
+	   (SELECT firstName FROM mechanic WHERE mechanicId = sr.mechanicId) AS 'Mechanic'
+FROM serviceRecord sr;
+
+SELECT * FROM serviceRecords;
+
 --I had the thought of stored procedures, although they are more encapsulating and centralized.
 --My research on how to implement procedures into the backend show that it takes much more code
 --to execute anyway.Thus I will stick with simple inserts,which are more readable.
