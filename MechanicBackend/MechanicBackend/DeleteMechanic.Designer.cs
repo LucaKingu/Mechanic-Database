@@ -38,7 +38,9 @@
             textBox1.BackColor = Color.Gainsboro;
             textBox1.Font = new Font("Segoe UI", 20F);
             textBox1.Location = new Point(358, 183);
+            textBox1.MaxLength = 10000;
             textBox1.Name = "textBox1";
+            textBox1.RightToLeft = RightToLeft.No;
             textBox1.Size = new Size(366, 43);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;

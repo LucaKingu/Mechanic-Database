@@ -42,6 +42,14 @@ namespace MechanicBackend
                     return; 
                 }
 
+                bool mechanicExists = CheckMechanicExists(id);
+
+                if(!mechanicExists)
+                {
+                    MessageBox.Show("Mechanic with the specified ID does not exist in the database", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 string deleteQuery = "DELETE FROM mechanic WHERE mechanicId = @mechanicId";
 
                 using(SqlCommand command = new SqlCommand(deleteQuery, connection))
@@ -59,6 +67,20 @@ namespace MechanicBackend
             }
 
 
+        }
+
+        //This is an extra check implemented to all DELETE Forms. 
+        //It checks if the given input exists before deleting it.
+        //If the query returns 1, then given input exists,otherwise it does not.
+        private bool CheckMechanicExists(string mechanicId)
+        {
+            string checkQuery = "SELECT COUNT(1) FROM mechanic WHERE mechanicId = @mechanicId";
+            using (SqlCommand command = new SqlCommand(checkQuery, connection))
+            {
+                command.Parameters.AddWithValue("@mechanicId", mechanicId);
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
+            }
         }
     }
 }
