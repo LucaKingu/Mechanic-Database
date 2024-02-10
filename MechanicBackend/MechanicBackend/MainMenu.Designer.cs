@@ -48,6 +48,11 @@
             button18 = new Button();
             button19 = new Button();
             button20 = new Button();
+            button21 = new Button();
+            button22 = new Button();
+            button23 = new Button();
+            button24 = new Button();
+            button25 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -333,11 +338,81 @@
             button20.UseVisualStyleBackColor = false;
             button20.Click += button20_Click;
             // 
-            // Form1
+            // button21
+            // 
+            button21.Anchor = AnchorStyles.None;
+            button21.BackColor = Color.Gold;
+            button21.Font = new Font("Segoe UI", 15F);
+            button21.Location = new Point(1452, 76);
+            button21.Name = "button21";
+            button21.Size = new Size(187, 32);
+            button21.TabIndex = 20;
+            button21.Text = "Search Mechanic";
+            button21.UseVisualStyleBackColor = false;
+            button21.Click += button21_Click;
+            // 
+            // button22
+            // 
+            button22.Anchor = AnchorStyles.None;
+            button22.BackColor = Color.Gold;
+            button22.Font = new Font("Segoe UI", 15F);
+            button22.Location = new Point(1452, 254);
+            button22.Name = "button22";
+            button22.Size = new Size(187, 32);
+            button22.TabIndex = 21;
+            button22.Text = "Search Service";
+            button22.UseVisualStyleBackColor = false;
+            button22.Click += button22_Click;
+            // 
+            // button23
+            // 
+            button23.Anchor = AnchorStyles.None;
+            button23.BackColor = Color.Gold;
+            button23.Font = new Font("Segoe UI", 15F);
+            button23.Location = new Point(1452, 431);
+            button23.Name = "button23";
+            button23.Size = new Size(187, 32);
+            button23.TabIndex = 22;
+            button23.Text = "Show Customer";
+            button23.UseVisualStyleBackColor = false;
+            button23.Click += button23_Click;
+            // 
+            // button24
+            // 
+            button24.Anchor = AnchorStyles.None;
+            button24.BackColor = Color.Gold;
+            button24.Font = new Font("Segoe UI", 15F);
+            button24.Location = new Point(1452, 606);
+            button24.Name = "button24";
+            button24.Size = new Size(187, 32);
+            button24.TabIndex = 23;
+            button24.Text = "Show Vehicle";
+            button24.UseVisualStyleBackColor = false;
+            button24.Click += button24_Click;
+            // 
+            // button25
+            // 
+            button25.Anchor = AnchorStyles.None;
+            button25.BackColor = Color.Gold;
+            button25.Font = new Font("Segoe UI", 15F);
+            button25.Location = new Point(1452, 772);
+            button25.Name = "button25";
+            button25.Size = new Size(187, 32);
+            button25.TabIndex = 24;
+            button25.Text = "Show Record";
+            button25.UseVisualStyleBackColor = false;
+            button25.Click += button25_Click;
+            // 
+            // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1971, 1137);
+            Controls.Add(button25);
+            Controls.Add(button24);
+            Controls.Add(button23);
+            Controls.Add(button22);
+            Controls.Add(button21);
             Controls.Add(button20);
             Controls.Add(button19);
             Controls.Add(button18);
@@ -358,7 +433,7 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Name = "Form1";
+            Name = "MainMenu";
             Text = "Mechanic Database";
             Load += Form1_Load;
             ResumeLayout(false);
@@ -386,5 +461,10 @@
         private Button button18;
         private Button button19;
         private Button button20;
+        private Button button21;
+        private Button button22;
+        private Button button23;
+        private Button button24;
+        private Button button25;
     }
 }

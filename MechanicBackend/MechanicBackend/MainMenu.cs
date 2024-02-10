@@ -50,7 +50,7 @@ namespace MechanicBackend
                     MessageBox.Show("Connection is open!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message + "\n\nPLESAE CHECK YOU HAVE THE CORRECT DATA SOURCE INPUTTED", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Added my own more user-friendly message under system exception so that the error can be better understood.
@@ -67,7 +67,7 @@ namespace MechanicBackend
             }
             else
             {
-                MessageBox.Show("Connection is not open" , "Warning" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation);
+                MessageBox.Show("Connection is not open", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -245,6 +245,34 @@ namespace MechanicBackend
 
             showInformation information = new showInformation(conn, "SELECT * FROM dbo.serviceRecords");
             information.Show();
+        }
+
+
+        //'SEARCH BY' Queries
+        private void button21_Click(object sender, EventArgs e)
+        {
+            SearchMechanic search = new SearchMechanic(conn);
+            search.Show();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
