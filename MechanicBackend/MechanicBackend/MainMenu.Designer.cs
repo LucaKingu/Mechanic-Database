@@ -373,7 +373,7 @@
             button23.Name = "button23";
             button23.Size = new Size(187, 32);
             button23.TabIndex = 22;
-            button23.Text = "Show Customer";
+            button23.Text = "Search Customer";
             button23.UseVisualStyleBackColor = false;
             button23.Click += button23_Click;
             // 
@@ -386,7 +386,7 @@
             button24.Name = "button24";
             button24.Size = new Size(187, 32);
             button24.TabIndex = 23;
-            button24.Text = "Show Vehicle";
+            button24.Text = "Search Vehicle";
             button24.UseVisualStyleBackColor = false;
             button24.Click += button24_Click;
             // 
@@ -399,7 +399,7 @@
             button25.Name = "button25";
             button25.Size = new Size(187, 32);
             button25.TabIndex = 24;
-            button25.Text = "Show Record";
+            button25.Text = "Search Record";
             button25.UseVisualStyleBackColor = false;
             button25.Click += button25_Click;
             // 

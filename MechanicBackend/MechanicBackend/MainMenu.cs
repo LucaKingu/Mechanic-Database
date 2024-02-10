@@ -22,11 +22,6 @@ namespace MechanicBackend
         string connectionString;
         SqlConnection conn;
 
-        SqlCommand command;
-        SqlDataReader reader;
-        string query = "";
-        string output = "";
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -269,12 +264,14 @@ namespace MechanicBackend
 
         private void button24_Click(object sender, EventArgs e)
         {
-
+            SearchVehicle search = new SearchVehicle(conn);
+            search.Show();
         }
 
         private void button25_Click(object sender, EventArgs e)
         {
-
+            SearchServiceRecord search = new SearchServiceRecord(conn);
+            search.Show();
         }
     }
 }

@@ -228,9 +228,8 @@
             textBox9.BackColor = Color.Gainsboro;
             textBox9.Font = new Font("Segoe UI", 20F);
             textBox9.Location = new Point(453, 300);
-            textBox9.Multiline = true;
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(307, 23);
+            textBox9.Size = new Size(307, 43);
             textBox9.TabIndex = 18;
             // 
             // label9

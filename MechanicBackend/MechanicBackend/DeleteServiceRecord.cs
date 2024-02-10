@@ -59,10 +59,10 @@ namespace MechanicBackend
   
         private bool checkRecordExists(string recordId)
         {
-            string checkQuery = "SELECT COUNT(1) FROM vehicle WHERE vehicleId = @vehicleId";
+            string checkQuery = "SELECT COUNT(1) FROM serviceRecord WHERE recordId = @recordId";
             using (SqlCommand command = new SqlCommand(checkQuery, connection))
             {
-                command.Parameters.AddWithValue("@vehicleId", recordId);
+                command.Parameters.AddWithValue("@recordId", recordId);
                 int count = (int)command.ExecuteScalar();
                 return count > 0;
             }
