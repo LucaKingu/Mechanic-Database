@@ -124,7 +124,8 @@ namespace MechanicBackend
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            DeleteMechanic delete = new DeleteMechanic(conn);
+            delete.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
