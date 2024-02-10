@@ -78,7 +78,7 @@ INSERT INTO mechanic (firstName , lastName , salary , contactNumber , email) VAL
 																					('Matthew' , 'Attard' , '21000' , '+356 79008246' , 'MatthewAttard@gmail.com');
 
 
-SELECT * FROM mechanic;
+--SELECT * FROM mechanic;
 
 
 
@@ -93,7 +93,7 @@ INSERT INTO [service] (serviceName , mechanicId) VALUES ('Engine Repairs' , 3),
 														('Diagnostic Services' , 3);
 
 
-SELECT * FROM [service];
+--SELECT * FROM [service];
 
 INSERT INTO customer (firstName , lastName , contactNumber , email , [address]) VALUES ('Laura' , 'Brincat' , '+356 79210567' , 'LB@gmail.com' , 'Zebbug, Triq il-Mithna, Ta filep');
 
@@ -107,7 +107,7 @@ INSERT INTO customer (firstName , lastName , contactNumber , email , [address]) 
 
 
 
-SELECT * FROM customer;
+--SELECT * FROM customer;
 
 
 INSERT INTO vehicle (brand , model , [year] , plate , customerId) VALUES ('Toyota' , 'camry' , '2024' , 'ALK 938' , 1);
@@ -121,11 +121,11 @@ INSERT INTO vehicle (brand , model , [year] , plate , customerId) VALUES ('Toyot
 																		 ('Mazda' , 'Demio' , '2022' , 'DA 466RO' , 7);
 
 
-SELECT * FROM vehicle;
+--SELECT * FROM vehicle;
 
 
-select * from service;
-select * from customer;
+--select * from service;
+--select * from customer;
 
 INSERT INTO serviceRecord (serviceDate , [description] , [status] , laborHours , partsUsed , totalCost , serviceId , customerId , mechanicId) VALUES
 						  ('2023-09-12' , '' , 1 , 3 , 'No parts used' , 70 , 1 , 1 , 4);
@@ -165,7 +165,7 @@ FROM customer c
 JOIN vehicle v 
 ON v.customerId = c.customerId
 
-SELECT * FROM customerVehicleInfo;
+--SELECT * FROM customerVehicleInfo;
 
 
 --Show all customers that need to return to garage
@@ -176,7 +176,7 @@ JOIN serviceRecord sr
 ON sr.customerId = c.customerId
 WHERE sr.[status] = 0
 
-SELECT * FROM customerReturns;
+--SELECT * FROM customerReturns;
 
 
 --show all mechanics and their services
@@ -187,20 +187,20 @@ JOIN [service] s
 ON m.mechanicId = s.mechanicId
 GROUP BY m.firstName , m.lastName, s.serviceName
 
-SELECT * FROM mechanicService;
+--SELECT * FROM mechanicService;
 
 
 --Show all service Records.since I have 3 foreign keys, it makes sense to show the actual names via sub-queries
 --This will not be an "extra feature" like the other views,but rather instead of showing the original service
 --record table,I will show this views table.
 CREATE OR ALTER VIEW serviceRecords AS
-SELECT sr.serviceDate , sr.[description] , sr.[status] , sr.laborHours , sr.partsUsed , sr.totalCost ,
+SELECT sr.recordId , sr.serviceDate , sr.[description] , sr.[status] , sr.laborHours , sr.partsUsed , sr.totalCost ,
 	   (SELECT serviceName FROM service WHERE serviceId = sr.serviceId) AS 'Service',
 	   (SELECT CONCAT(firstName, ' ' , lastName)  FROM customer WHERE customerId = sr.customerId) AS 'Customer',
 	   (SELECT CONCAT(firstName, ' ', lastName) FROM mechanic WHERE mechanicId = sr.mechanicId) AS 'Mechanic'
 FROM serviceRecord sr;
 
-SELECT * FROM serviceRecords;
+--SELECT * FROM serviceRecords;
 
 --I had the thought of stored procedures, although they are more encapsulating and centralized.
 --My research on how to implement procedures into the backend show that it takes much more code
