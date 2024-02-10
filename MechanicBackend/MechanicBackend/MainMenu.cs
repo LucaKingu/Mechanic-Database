@@ -144,7 +144,8 @@ namespace MechanicBackend
         //Service table Manipulation
         private void button9_Click(object sender, EventArgs e)
         {
-
+            AddService addService = new AddService(conn);
+            addService.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
