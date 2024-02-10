@@ -177,7 +177,8 @@ namespace MechanicBackend
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            DeleteCustomer deleteCustomer = new DeleteCustomer(conn);
+            deleteCustomer.Show();
         }
 
         private void button14_Click(object sender, EventArgs e)

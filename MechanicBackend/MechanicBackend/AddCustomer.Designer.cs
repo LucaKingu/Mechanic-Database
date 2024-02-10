@@ -172,7 +172,7 @@
             Controls.Add(textBox1);
             Controls.Add(button1);
             Name = "AddCustomer";
-            Text = "AddCustomer";
+            Text = "Add Customer";
             ResumeLayout(false);
             PerformLayout();
         }
