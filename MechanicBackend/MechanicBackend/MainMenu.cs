@@ -231,7 +231,8 @@ namespace MechanicBackend
 
         private void button19_Click(object sender, EventArgs e)
         {
-
+            DeleteServiceRecord deleteServiceRecord = new DeleteServiceRecord(conn);
+            deleteServiceRecord.Show();
         }
 
         private void button20_Click(object sender, EventArgs e)

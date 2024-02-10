@@ -23,7 +23,6 @@ namespace MechanicBackend
 
         private void button1_Click(object sender, EventArgs e)
         {
-            {
                 {
                     try
                     {
@@ -58,7 +57,6 @@ namespace MechanicBackend
                         MessageBox.Show("An error occured: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-            }
         }
             private bool checkVehicleExists(string vehicleId)
             {

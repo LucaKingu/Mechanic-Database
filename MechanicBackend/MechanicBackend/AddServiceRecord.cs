@@ -47,6 +47,10 @@ namespace MechanicBackend
                 string mechanicId = textBox8.Text;
                 string description = textBox9.Text;
 
+                //partsUsed will not be allowed null, I took it in such a way that the boss would want to know
+                //where all his stock is going, if none was used then he rather would have it written down for integrity
+                //and security rather then leaving it null. Ofcourse leaving it null was an option, which would of been implemented
+                //the same way as description.
                 if (string.IsNullOrWhiteSpace(serviceDate) || string.IsNullOrWhiteSpace(status) || string.IsNullOrWhiteSpace(laborHours) || string.IsNullOrWhiteSpace(partsUsed) || string.IsNullOrWhiteSpace(totalCost) || string.IsNullOrWhiteSpace(mechanicId) || string.IsNullOrWhiteSpace(customerId) || string.IsNullOrWhiteSpace(serviceId))
                 {
                     MessageBox.Show("Only the DESCRIPTION field can be empty", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
