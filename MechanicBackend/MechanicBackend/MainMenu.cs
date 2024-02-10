@@ -257,12 +257,14 @@ namespace MechanicBackend
 
         private void button22_Click(object sender, EventArgs e)
         {
-
+            SearchService search = new SearchService(conn);
+            search.Show();
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-
+            SearchCustomer search = new SearchCustomer(conn);
+            search.Show();
         }
 
         private void button24_Click(object sender, EventArgs e)
