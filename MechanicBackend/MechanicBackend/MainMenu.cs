@@ -171,7 +171,8 @@ namespace MechanicBackend
         //Customer table Manipulation
         private void button12_Click(object sender, EventArgs e)
         {
-
+            AddCustomer addCustomer = new AddCustomer(conn);
+            addCustomer.Show();
         }
 
         private void button13_Click(object sender, EventArgs e)
