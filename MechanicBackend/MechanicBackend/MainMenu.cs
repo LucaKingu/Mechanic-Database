@@ -198,12 +198,14 @@ namespace MechanicBackend
         //Vehicle table Manipulation
         private void button15_Click(object sender, EventArgs e)
         {
-
+            AddVehicle addVehicle = new AddVehicle(conn);
+            addVehicle.Show();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-
+            DeleteVehicle deleteVehicle = new DeleteVehicle(conn);
+            deleteVehicle.Show();
         }
 
         private void button17_Click(object sender, EventArgs e)

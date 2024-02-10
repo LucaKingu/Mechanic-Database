@@ -33,9 +33,9 @@ namespace MechanicBackend
                         return;
                     }
 
-                    bool mechanicExists = checkCustomerExist(id);
+                    bool customerExists = checkCustomerExist(id);
 
-                    if (!mechanicExists)
+                    if (!customerExists)
                     {
                         MessageBox.Show("Customer with the specified ID does not exist in the database", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;

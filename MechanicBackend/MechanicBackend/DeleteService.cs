@@ -32,9 +32,9 @@ namespace MechanicBackend
                     return;
                 }
 
-                bool mechanicExists = CheckServiceExists(id);
+                bool serviceExists = CheckServiceExists(id);
 
-                if (!mechanicExists)
+                if (!serviceExists)
                 {
                     MessageBox.Show("Service with the specified ID does not exist in the database", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
