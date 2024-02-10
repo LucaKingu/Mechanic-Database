@@ -150,7 +150,8 @@ namespace MechanicBackend
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            DeleteService deleteService = new DeleteService(conn);
+            deleteService.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)

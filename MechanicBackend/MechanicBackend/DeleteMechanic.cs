@@ -65,8 +65,6 @@ namespace MechanicBackend
             {
                 MessageBox.Show("An error occured: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
         }
 
         //This is an extra check implemented to all DELETE Forms. 
