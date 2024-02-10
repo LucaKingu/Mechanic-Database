@@ -225,7 +225,8 @@ namespace MechanicBackend
         //Service Records table Manipulation
         private void button18_Click(object sender, EventArgs e)
         {
-
+            AddServiceRecord addServiceRecord = new AddServiceRecord(conn);
+            addServiceRecord.Show();
         }
 
         private void button19_Click(object sender, EventArgs e)
