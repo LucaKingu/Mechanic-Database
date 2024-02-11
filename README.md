@@ -1,4 +1,4 @@
-This is a database for a Mechanic. Built with MSSQL , C# Windows application and (later on)added on Dockerization. 
+This is a database for a Mechanic. Built with MSSQL and C# Windows application. 
 
 The creation of this project shows:
   >Proper table creations and automation
@@ -11,4 +11,4 @@ The creation of this project shows:
   >Error and validation handling throughout entire program
   >Better familiarity with windows applications
   >Better technical understanding of backend and data layers as a structure
-  >Problem solving for all DB , C# and Docker throughout entire program creation
+  >Problem solving for MSSQL and c# throughout entire program creation
