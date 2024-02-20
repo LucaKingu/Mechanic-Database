@@ -8,6 +8,7 @@ The creation of this project shows:
   >Proper use of DML
   >Technical understanding of Data modelling via ERD
   >Better Understanding of SQLClient and Database connections
+  >Use of Parameterized queries to mitigate SQLInjection attacks 
   >Error and validation handling throughout entire program
   >Better familiarity with windows applications
   >Better technical understanding of backend and data layers as a structure
